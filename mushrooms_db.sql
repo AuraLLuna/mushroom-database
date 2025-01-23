@@ -1,4 +1,6 @@
---*** Mushroom SQL database Simple query ***--
+--*** Mushroom SQL - clean Data csv file ***--
+
+-- create table before altering
 CREATE TABLE IF NOT EXISTS mushrooms (
         class_ VARCHAR(1),
         cap_shape VARCHAR(1),
@@ -25,16 +27,12 @@ CREATE TABLE IF NOT EXISTS mushrooms (
         habitat VARCHAR(1)
 );
 
---*** Adjusting the Data Set ***--
-
-
--- Removing '?' and replacing with recognizable NULL type
+-- Removing stalk_root '?' and replacing with recognizable NULL type
 UPDATE mushrooms
 SET stalk_root = NULL
 WHERE stalk_root = '?';
 
--- ALtering bruises column from VARCHAR(1) to BOOLEAN type
-
+-- ALtering bruises column type VARCHAR(1) to type BOOLEAN
 ALTER TABLE mushrooms 
 	ALTER COLUMN bruises TYPE BOOLEAN USING bruises::BOOLEAN;
 UPDATE mushrooms
@@ -44,8 +42,7 @@ SET bruises = CASE
 	ELSE NULL
 END;
 
--- ALtering ring_number to actual INT value
-
+-- ALtering ring_number column type VARCHAR(1) to type INTEGER
 UPDATE mushrooms
 SET ring_number = CASE
 	WHEN ring_number = 'n' THEN 0
@@ -53,17 +50,10 @@ SET ring_number = CASE
 	WHEN ring_number = 't' THEN 2
 	ELSE NULL
 END;
-
-
-
 ALTER TABLE mushrooms
 	ALTER COLUMN ring_number TYPE INTEGER USING ring_number::INTEGER;
-	
-SELECT * FROM mushrooms
-LIMIT 150;
 
-SELECT DISTINCT ring_number FROM mushrooms;
-
-
+-- Create new table to download clean dataset.
+SELECT * FROM mushrooms;
 
 
