@@ -1,17 +1,15 @@
 # OVERVIEW
-This project includes a csv file of different classes of mushrooms and there respective properties.
+In this project, I explored a dataset involving characteristics of mushrooms such as whether or not they are poisonous or edible mushroom. Using PostgreSQL and pgAdmin for the environment, I cleaned, transofrmed and quiered the dataset. The original dataset is from a dataset from the "Mushroom Classification" page on [Kaggle -> Mushroom Class](https://www.kaggle.com/datasets/uciml/mushroom-classification). There are no authors however UCI Machine Learning and Meg Risdel are known collaborators of this data set. From this project, I developed a better understanding of SQL quieries and data manipulation techniques. 
 
-The original dataset is from a dataset from [Kaggle -> Mushroom Class](https://www.kaggle.com/datasets/uciml/mushroom-classification). There are no authors however UCI Machine Learning and Meg Risdel are known collaborators of this data set.
+# 1) Choosing Dataset and Enviroment
+The dataset includes 22 categorical features describing different types of mushrooms. I used PostgreSQL with the pgAdmin interface. A table was created to store the dataset, and SQL quieries were used to find different insights on the dataset.
 
-# 1) Processing Raw Dataset
+# 2) Processing Raw Dataset
 The dataset was originally placed into a table as originally represented in the csv file. It was later altered for better readibly and straightforward because it made more sense
-The dataset was initially loaded into a table with its raw form of data as originally represented in the CSV file. To imporve readibilty and usability, the data was cleaned and modified. An example would be be changing the ring_numbers value from 'n','o','t' -> 0,1,2. This made it more straightforward for querying.
+The dataset was initially loaded into a table with its raw form of data as originally represented in the csv file. To imporve readibilty and usability, the data was cleaned and modified. An example would be be changing the ring_numbers value from 'n','o','t' -> 0,1,2. This made it more straightforward for querying. mushrooms_db.sql was somehting I developed in order to create the new clean csv file.
 
 # 2) Querying the Dataset
-todo
-
-# 3) Visualizing the Data
-todo
+Using Chat GPT, I was able to generate 15 questions about the dataset that I would use to create querys. The mushrooms_clean_db.sql includes all 15 questions and their answers.
 
 ## Mushrooms Classification - Raw dataset
 The original legend for each value in its respective columns.
