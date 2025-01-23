@@ -8,7 +8,7 @@ The dataset includes 22 categorical features describing different types of mushr
 The dataset was originally placed into a table as originally represented in the csv file. It was later altered for better readibly and straightforward because it made more sense
 The dataset was initially loaded into a table with its raw form of data as originally represented in the csv file. To imporve readibilty and usability, the data was cleaned and modified. An example would be be changing the ring_numbers value from 'n','o','t' -> 0,1,2. This made it more straightforward for querying. mushrooms_db.sql was somehting I developed in order to create the new clean csv file.
 
-# 2) Querying the Dataset
+# 3) Querying the Dataset
 Using Chat GPT, I was able to generate 15 questions about the dataset that I would use to create querys. The mushrooms_clean_db.sql includes all 15 questions and their answers.
 
 ## Mushrooms Classification - Raw dataset
